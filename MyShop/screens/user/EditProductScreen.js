@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useReducer } from "react";
-import { Text, View, StyleSheet, TextInput, ScrollView, Platform, Alert } from "react-native";
+import { View, StyleSheet, ScrollView, Platform, Alert, KeyboardAvoidingView } from "react-native";
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { useSelector, useDispatch } from "react-redux";
 import HeaderButton from '../../components/UI/HeaderButton';
@@ -84,6 +84,7 @@ const EditProductScreen = props => {
     },[dispatchFormState]);
 
     return (
+        <KeyboardAvoidingView style={{flex:1}} behavior="padding" keyboardVerticalOffset={100}>
         <ScrollView>
             <View style={styles.form}>
                 <Input
@@ -137,6 +138,7 @@ const EditProductScreen = props => {
                 ></Input>
             </View>
         </ScrollView>
+        </KeyboardAvoidingView>
     )
 }
 
