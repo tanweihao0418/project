@@ -1,7 +1,7 @@
 import cv2
 
 video=cv2.VideoCapture(0)
-cascade= cv2.CascadeClassifier("haarcascade_upperbody.xml")
+cascade= cv2.CascadeClassifier("Haar/Cascade/haarcascade_upperbody.xml")
 
 while True:
     check, frame = video.read()
